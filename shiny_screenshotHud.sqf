@@ -49,8 +49,6 @@ _shiny_toggle = {
 			[_varName, _varVal] call _shiny_setter;
 		} foreach shiny_screenShotClearHudValues;
 	};
-
-	systemChat "--------------------------------";
 };
 
 while {alive player} do {	
