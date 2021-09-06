@@ -18,8 +18,7 @@ if (isNil{shiny_screenshotClearHudValues}) then {
 
 _shiny_setter = {
 	params ["_name", "_val"];
-
-	player sidechat format["%1: %2", _name, _val];
+	
 	if (_name == "showHUD") then {
 		showHUD _val;
 	} else {
