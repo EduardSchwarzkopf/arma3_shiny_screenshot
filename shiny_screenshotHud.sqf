@@ -14,7 +14,7 @@ if (isNil{shiny_screenshotClearHudValues}) then {
 		["diwako_dui_nametags_enabled", false],
 		["diwako_dui_namelist", false]
 	];
-}
+};
 
 _shiny_setter = {
 	params ["_name", "_val"];
