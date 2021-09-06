@@ -8,7 +8,7 @@ waitUntil {!isNull player};
 
 if (isNil{shiny_screenshotClearHudValues}) then {
 	shiny_screenshotClearHudValues = [
-		// [variable Name, empty Value, (optional) ini Value]
+		// [variable Name, empty Value, (optional) init Value]
 		["showHUD", [false,false,false,false,false,false,false,false,false,false,false], shownHUD],
 		["diwako_dui_compass_style", ["", "", ""]],
 		["diwako_dui_compass_opacity", 0],
