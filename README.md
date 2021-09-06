@@ -1,4 +1,4 @@
-# Arma 3 - Place Sandbags
+# Arma 3 - shiny's screenshot HUD
 
 ## install
 
