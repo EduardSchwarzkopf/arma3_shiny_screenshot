@@ -4,6 +4,10 @@
 
 place `shiny_screenshotHud.sqf .sqf` in your `scripts` folder
 
+## toggle
+
+you need to bind `Use Action 10` to toggle the HUD
+
 ## init
 
 put the following code in your `init.sqf` or `initPlayerLocal.sqf` **and** in your `onPlayerRespawn.sqf`:  
