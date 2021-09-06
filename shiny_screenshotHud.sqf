@@ -4,6 +4,8 @@ private ["_shiny_toggle", "_shiny_setter", "_prefix"];
 
 _prefix = "shiny_screenshot_";
 
+waitUntil {!isNull player};
+
 if (isNil{shiny_screenshotClearHudValues}) then {
 	shiny_screenshotClearHudValues = [
 		// [variable Name, empty Value, (optional) ini Value]
