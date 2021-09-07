@@ -1,14 +1,23 @@
 // Author: shinySonic [RCT-7]
 
-private ["_shiny_toggle", "_shiny_setter", "_prefix"];
+waitUntil {!isNull(findDisplay 46)};
+private ["_shiny_toggle", "_shiny_setter", "_prefix", "_userAction"];
+
+_userAction = "User10";
+_actionKeys = actionKeysNames _userAction;
+
+if (_actionKeys != "") then {
+	systemChat format["shiny_screenshot: Press <%1> to toggle your HUD", _actionKeys];
+} else {
+	systemChat format["shiny_screenshot: You need to bind <%1> to toggle your HUD", (actionName _userAction)];
+};
 
 _prefix = "shiny_screenshot_";
 
-waitUntil {!isNull player};
 
 if (isNil{shiny_screenshotClearHudValues}) then {
 	shiny_screenshotClearHudValues = [
-		// [variable Name, empty Value, (optional) init Value]
+		// [variable Name, empty Value, (optional) ini Value]
 		["showHUD", [false,false,false,false,false,false,false,false,false,false,false], shownHUD],
 		["diwako_dui_compass_style", ["", "", ""]],
 		["diwako_dui_compass_opacity", 0],
@@ -51,12 +60,13 @@ _shiny_toggle = {
 			[_varName, _varVal] call _shiny_setter;
 		} foreach shiny_screenShotClearHudValues;
 	};
+
 };
 
 while {alive player} do {	
 	_switchingStr = "Switching";
 	_switching = player getVariable [format ["%1%2", _prefix, _switchingStr], true];
-	waitUntil {inputAction "User10" > 0 && _switching};
+	waitUntil {inputAction _userAction > 0 && _switching};
 	
 	player setVariable [format["%1%2", _prefix, _switchingStr], false];
 	_toggleVarName = format["%1Toggle", _prefix];
