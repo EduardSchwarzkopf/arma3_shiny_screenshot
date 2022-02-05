@@ -11,7 +11,7 @@ you need to bind `Use Action 10` to toggle the HUD
 ## init
 
 put the following code in your `init.sqf` or `initPlayerLocal.sqf` **and** in your `onPlayerRespawn.sqf`:  
-`[] execVM "scripts\shiny_screenshotHud.sqf .sqf";`
+`[] execVM "scripts\shiny_screenshotHud.sqf";`
 
 ## customize
 
