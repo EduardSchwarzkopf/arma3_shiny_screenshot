@@ -2,7 +2,7 @@
 
 ## install
 
-place `shiny_screenshotHud.sqf .sqf` in your `scripts` folder
+place `shiny_screenshotHud.sqf` in your `scripts` folder
 
 ## toggle
 
